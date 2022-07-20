@@ -10,7 +10,7 @@ COPY ./frontend .
 # Install nodde modules and buil assets
 RUN npm cache clean --force
 RUN npm cache verify
-RUN npm install -timeout=600000
+RUN npm install --only=production
 RUN npm update
 RUN npm run build
 
@@ -26,7 +26,7 @@ RUN rm -rf ./*
 # Copy static assets from builder stage
 COPY --from=builder /app/build .
 
-COPY ./frontend/nginx/nginx.conf /etc/nginx/nginx.conf
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 
 # Containers run nginx with global directives and daemon off
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
