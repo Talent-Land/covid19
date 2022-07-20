@@ -5,7 +5,7 @@ RUN npm install -g serve
 
 WORKDIR /usr/src/app
 
-COPY ./frontend .
+COPY ./ .
 
 RUN npm install --only=production
 
