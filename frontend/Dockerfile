@@ -8,6 +8,8 @@ WORKDIR /app
 COPY . .
 
 # Install nodde modules and buil assets
+RUN npm cache clean --force
+RUN npm cache verify
 RUN npm install --production
 RUN npm update
 RUN npm run build
