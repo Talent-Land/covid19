@@ -1,5 +1,5 @@
 # Name the node stage "builder" 
-FROM node:latest AS builder
+FROM node:16.13.0 AS builder
 
 # Set working directory
 WORKDIR /app
