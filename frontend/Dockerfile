@@ -1,5 +1,5 @@
 # Name the node stage "builder" 
-FROM node:16.13.0 AS builder
+FROM node:latest AS builder
 
 # Set working directory
 WORKDIR /app
@@ -10,7 +10,7 @@ COPY . .
 # Install nodde modules and buil assets
 RUN npm cache clean --force
 RUN npm cache verify
-RUN npm install --production
+RUN npm install
 RUN npm update
 RUN npm run build
 
