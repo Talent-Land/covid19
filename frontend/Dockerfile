@@ -2,10 +2,10 @@
 FROM node:latest AS builder
 
 # Set working directory
-WORKDIR /app/frontend
+WORKDIR /app
 
 # Copy all files from current directory to working dir in image
-COPY . .
+COPY ./frontend .
 
 # Install nodde modules and buil assets
 RUN npm cache clean --force
