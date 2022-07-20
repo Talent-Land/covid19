@@ -2,7 +2,7 @@
 FROM node:latest AS builder
 
 # Set working directory
-WORKDIR /app
+WORKDIR /app/frontend
 
 # Copy all files from current directory to working dir in image
 COPY . .
