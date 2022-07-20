@@ -1,32 +1,9 @@
-# Name the node stage "builder" 
-FROM node:latest AS builder
-
-# Set working directory
-WORKDIR /app
-
-# Copy all files from current directory to working dir in image
-COPY ./frontend .
-
-# Install nodde modules and buil assets
-RUN npm cache clean --force
-RUN npm cache verify
+FROM node:latest
+RUN npm install -g serve # A simple webserver
+WORKDIR /usr/src/app
+COPY package*.json ./
 RUN npm install --only=production
-RUN npm update
+COPY . .
 RUN npm run build
-
-# nginx state for serving content
-FROM nginx:alpine
-
-# Set working directory to nginx asset directory
-WORKDIR /usr/share/nginx/html
-
-# Remove default nginx static assets
-RUN rm -rf ./*
-
-# Copy static assets from builder stage
-COPY --from=builder /app/build .
-
-COPY ./frontend/nginx/nginx.conf /etc/nginx/nginx.conf
-
-# Containers run nginx with global directives and daemon off
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+EXPOSE 3000
+CMD ["serve", "-s", "build", "-l", "3000"]
