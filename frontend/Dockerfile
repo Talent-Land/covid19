@@ -10,7 +10,7 @@ COPY . .
 # Install nodde modules and buil assets
 RUN npm cache clean --force
 RUN npm cache verify
-RUN npm install
+RUN npm install -timeout=600000
 RUN npm update
 RUN npm run build
 
