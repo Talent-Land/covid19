@@ -1,17 +1,19 @@
 import React from "react";
 import Button from "../components/button.component";
 import ToggleButton from "../components/toggle_button.component";
-import Mapitero from "../assets/mapacool.jpg";
+
 export const MainContainer = () => {
   return (
-    <div className="w-8/12">
+    <div className='flex flex-col'>
       {/* TOP BAR */}
-      <div className="flex place-content-center">
-        <Button />
+      <div className=''>
         <ToggleButton />
       </div>
 
-      <img src={Mapitero} alt="mapa"/>
+      {/* MAP */}
+      <div>
+        <img src="../assets/mapacool.jpg" alt="mapa" />
+      </div>
     </div>
   );
 };
