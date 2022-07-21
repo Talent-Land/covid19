@@ -6,13 +6,13 @@ export const MapGraphicContainer = () => {
   return (
     <div className='flex flex-col'>
       {/* TOP BAR */}
-      <div className=''>
+      <div className='flex place-self-end mr-2'>
         <ToggleButton />
       </div>
 
       {/* MAP */}
       <div>
-        <img src="../assets/mapacool.jpg" alt="mapa" />
+        <img src="../assets/mapacool.jpeg" alt="mapa"/>
       </div>
     </div>
   );
