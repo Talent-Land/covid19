@@ -5,7 +5,7 @@ import ToggleButton from "../components/toggle_button.component";
 
 export const StatisticContainer = () => {
   return (
-      <div className="grid grid-cols-4">
+      <div className="grid grid-cols-4 ml-2">
         <StatisticCard />
         <StatisticCard />
         <StatisticCard />

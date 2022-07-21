@@ -10,9 +10,9 @@ const ResearchContainer = () => {
       {/* SEARCH BAR */}
       <div className="flex mt-4">
         {/* SEARCH */}
-        <div className="flex rounded-md drop-shadow-xl border-2 border-gray-500 h-fit w-full mt-2 px-2">
+        <div className="h-fit w-full mt-2 px-2">
           <SearchBar />
-        </div>
+        </div> 
 
         {/* FILTER BUTTON */}
         <button className="rounded-xl bg-blue-600 hover:bg-blue-800 m-2 p-2">

@@ -3,14 +3,23 @@ import SearchSVG from "../assets/svg/search.svg";
 
 export const SearchBar = () => {
   return (
-    <div className="flex m-1">
-      <div className='bg-blue-600'>
-        <SearchSVG classname="text-black fill-current h-6" title={false} />
-      </div>
-      <div className="text-gray-500 text-xl pl-2">
-        <p>Search...</p>
-      </div>
-    </div>
+    <>
+      <form>
+        <label htmlFor="default-search" className="text-gray-900 sr-only">
+          Buscar...
+        </label>
+        <div className='flex'>
+          <input
+            type="search"
+            id="default-search"
+            className="text-gray-900 bg-gray-50 rounded-l-lg border border-gray-300 p-2 pl-10 w-full"
+          />
+          <button type="submit" className='bg-blue-600 hover:bg-blue-800 rounded-r-lg px-4'>
+            <SearchSVG classname="text-white fill-current h-6" title={false} />
+          </button>
+        </div>
+      </form>
+    </>
   );
 };
 
