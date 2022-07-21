@@ -10,7 +10,7 @@ interface props {
 export const StatisticCard = ({ title, color, bordercolor, children }: props) => {
   return (
     <div
-      className={`${color} border-l-4 ${bordercolor} rounded-md drop-shadow-2xl mr-2 my-2 p-2`}
+      className={`flex flex-col basis-3/12 ${color} border-l-4 ${bordercolor} rounded-md drop-shadow-2xl mr-2 my-2 p-2`}
     >
       {/* RESEARCH TITLE */}
       <div className="font-bold pb-1">{title}</div>

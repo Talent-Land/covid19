@@ -15,7 +15,10 @@ module.exports = {
       yellowT: colors.yellow,
       purpleT: colors.purple,
       orangeT: colors.orange,
+      grayT: colors.gray,
       pinkT: colors.pink,
+      whiteT: colors.white,
+      blackT: colors.black,
       wine: {
         themeDarker: "#500b31",
         themeDark: "#6d0f43",
