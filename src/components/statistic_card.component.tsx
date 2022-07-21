@@ -1,17 +1,23 @@
 import React from "react";
 
-export const StatisticCard = () => {
-  return <div className=' bg-green-200 rounded-md drop-shadow-2xl mr-2 my-2 p-2'>
-    {/* RESEARCH TITLE */}
-    <div className='text-xl font-bold pb-2'>
-      THIS IS A TEST
+interface props {
+  title: string;
+  color: string;
+  children: JSX.Element;
+}
+
+export const StatisticCard = ({ title, color, children }: props) => {
+  return (
+    <div
+      className={`bg-${color} border-l-4 border-blue-500 rounded-md drop-shadow-2xl mr-2 my-2 p-2`}
+    >
+      {/* RESEARCH TITLE */}
+      <div className="font-bold pb-1">{title}</div>
+
+      <hr className="border-gray-400"></hr>
+      <div className="pt-2">{children}</div>
     </div>
-    <hr className='border-gray-400'></hr>
-    {/* RESEARCH CONTENT */}
-    <div className='pt-2'>
-      HOW MANY APPLES ARE ON THE TREE: 4
-    </div>
-    </div>;
+  );
 };
 
 export default StatisticCard;

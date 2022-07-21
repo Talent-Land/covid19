@@ -8,19 +8,8 @@ const ResearchContainer = () => {
   return (
     <div className="absolute bg-transparent w-4/12 right-0">
       {/* SEARCH BAR */}
-      <div className="flex mt-4">
-        {/* SEARCH */}
-        <div className="h-fit w-full mt-2 px-2">
+      <div className="h-fit w-full">
           <SearchBar />
-        </div> 
-
-        {/* FILTER BUTTON */}
-        <button className="rounded-xl bg-blue-600 hover:bg-blue-800 m-2 p-2">
-          <FilterSVG
-            classname="text-white fill-current h-6"
-            title={false}
-          />
-        </button>
       </div>
 
       {/* RESEARCH CARDS */}
