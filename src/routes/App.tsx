@@ -19,7 +19,7 @@ function App() {
 
 const Layout = () => {
   return (
-    <div className="flex w-screen h-screen">
+    <div className="flex h-screen overflow-hidden">
       <Outlet />
     </div>
   );

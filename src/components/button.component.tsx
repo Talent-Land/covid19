@@ -1,7 +1,12 @@
 import React from "react";
 
-export const Button = () => {
-  return <button className="bg-gray-500 text-3xl m-4">THIS IS A BUTTON</button>;
+interface props{
+  text:string,
+  color: string,
+  colorHover: string,
+}
+export const Button = ({text, color, colorHover} : props) => {
+  return <button className={`${color} ${colorHover} text-whiteT rounded-md m-2 p-2`}>{text}</button>;
 };
 
 export default Button;

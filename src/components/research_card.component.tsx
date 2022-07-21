@@ -1,15 +1,19 @@
 import React from "react";
 
-export const ResearchCard = () => {
-  return <div className=' bg-white rounded-md drop-shadow-2xl mr-2 my-2 p-2'>
+interface props{
+  title: string,
+  content: string,
+}
+export const ResearchCard = ({title, content}: props) => {
+  return <div className='hover:cursor-pointer bg-transparent hover:bg-blue-themeLighter rounded-md drop-shadow-3xl mr-2 my-2 p-2'>
     {/* RESEARCH TITLE */}
     <div className='font-bold pb-2'>
-      THIS IS A TEST
+      {title}
     </div>
     <hr></hr>
     {/* RESEARCH CONTENT */}
     <div className='text-sm pt-2'>
-      THIS IS THE CONTENT OF THE TEST, IM JUST TRYING TO FILL THE CARD SO IT LOOKS LIKE IT HAS SOME REAL CONTENT
+      {content}
     </div>
     </div>;
 };
