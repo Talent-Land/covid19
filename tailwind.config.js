@@ -1,8 +1,73 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require("tailwindcss/colors");
+
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}',],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {},
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      blueT: colors.blue,
+      redT: colors.red,
+      greenT: colors.green,
+      yellowT: colors.yellow,
+      purpleT: colors.purple,
+      orangeT: colors.orange,
+      pinkT: colors.pink,
+      wine: {
+        themeDarker: "#500b31",
+        themeDark: "#6d0f43",
+        themeDarkAlt: "#81124f",
+        themePrimary: "#8f1458",
+        themeSecondary: "#9c2667 ",
+        themeTertiary: "#bc5b90",
+        themeLight: "#dda4c4",
+        themeLighter: "#edccde",
+        themeLighterAlt: "#fbf2f7",
+      },
+      blue: {
+        themeDarker: "#005377",
+        themeDark: "#0071a1",
+        themeDarkAlt: "#0085be",
+        themePrimary: "#0093d4",
+        themeSecondary: "#1aa0d9",
+        themeTertiary: "#5cbce5",
+        themeLight: "#a9dcf2",
+        themeLighter: "#d0ecf8",
+        themeLighterAlt: "#f3fafd", 
+      },
+      gold: {
+        themeDarker: "#866207",
+        themeDark: "#b68509",
+        themeDarkAlt: "#d89e0b",
+        themePrimary: "#efad0b",
+        themeSecondary: "#f2b828",
+        themeTertiary: "#f6ce6a",
+        themeLight: "#fae6b3",
+        themeLighter: "#fdf2d6",
+        themeLighterAlt: "#fefcf5",
+      },
+      foreground: {
+        black: "#000",
+        neutralDark: "#201f1e",
+        neutralPrimary: "#323130",
+        neutralPrimaryAlt: "#3b3a39",
+        neutralSecondary: "#605e5c",
+        neutralTertiary: "#a19f9d",
+        neutralSecondaryAlt: "#8a8886",
+        white: "#fff",
+      },
+      background: {
+        neutralTertiaryAlt: "#c8c6c4",
+        neutralDark: "#201f1e",
+        neutralQuaternaryAlt: "#e1dfdd",
+        neutralLight: "#edebe9",
+        neutralLighter: "#f3f2f1",
+        neutralLighterAlt: "#faf9f8",
+      },
+    },
   },
   plugins: [],
-}
+};

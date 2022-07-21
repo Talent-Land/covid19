@@ -1,6 +1,6 @@
 export const ClincStudyOverview = () => {
   return (
-    <div className=" bg-white rounded-md drop-shadow-2xl mr-2 my-2 p-2">
+    <div className=" bg-wine-themePrimary rounded-md drop-shadow-2xl mr-2 my-2 p-2">
       {/* RESEARCH TITLE */}
       <div className="text-xl font-bold pb-2">THIS IS A TEST</div>
       <hr></hr>
