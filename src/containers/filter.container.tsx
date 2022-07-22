@@ -1,7 +1,7 @@
 import React, { Dispatch, SetStateAction } from "react";
 import FilterSVG from "../assets/svg/filter.svg";
 import MarsSVG from "../assets/svg/mars.svg";
-import Button from "../components/button.component";
+import Button from "../components/buttons/button.component";
 
 interface props {
   setfilterState: Dispatch<SetStateAction<boolean>>;

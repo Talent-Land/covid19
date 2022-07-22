@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ResearchCard from "../components/research_card.component";
+import ResearchCard from "../components/cards/research_card.component";
 import SearchBar from "../components/search_bar.component";
 import FilterContainer from "./filter.container";
 

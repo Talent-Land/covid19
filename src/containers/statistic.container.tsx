@@ -3,8 +3,8 @@ import CountrieSVG from "../assets/svg/countrie.svg";
 import MarsSVG from "../assets/svg/mars.svg";
 import VenusSVG from "../assets/svg/venus.svg";
 import WorldSVG from "../assets/svg/world.svg";
-import StatisticCard from "../components/statistic_card.component";
-import ToggleButton from "../components/toggle_button.component";
+import StatisticCard from "../components/cards/statistic_card.component";
+import ToggleButton from "../components/buttons/toggle_button.component";
 
 export const StatisticContainer = () => {
   return (

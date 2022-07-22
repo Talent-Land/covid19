@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import AllWorldSVG from "../assets/svg/all_world.svg";
-import GraphicSVG from "../assets/svg/graphic.svg";
-import WorldSVG from "../assets/svg/world.svg";
+import AllWorldSVG from "../../assets/svg/all_world.svg";
+import GraphicSVG from "../../assets/svg/graphic.svg";
 
 export const ToggleButton = () => {
   const [isWorld_active, setisWorld_active] = useState(true);
