@@ -4,6 +4,7 @@ import MarsSVG from "../assets/svg/mars.svg";
 import VenusSVG from "../assets/svg/venus.svg";
 import WorldSVG from "../assets/svg/world.svg";
 import StatisticCard from "../components/statistic_card.component";
+import ToggleButton from "../components/toggle_button.component";
 
 export const StatisticContainer = () => {
   return (
@@ -53,6 +54,7 @@ export const StatisticContainer = () => {
           </div>
         </StatisticCard>
       </div>
+      <ToggleButton/>
     </div>
   );
 };

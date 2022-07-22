@@ -23,7 +23,7 @@ export const SearchBar = ({ setfilterState, filterState }: props) => {
           />
           <button
             type="submit"
-            className="bg-blueT-600 hover:bg-blueT-800 rounded-r-lg px-4"
+            className="bg-blue-themePrimary hover:bg-blue-themeDark rounded-r-lg px-4"
           >
             <SearchSVG classname="text-whiteT fill-current h-4" title={false} />
           </button>

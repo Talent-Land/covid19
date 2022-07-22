@@ -10,7 +10,7 @@ export const MainContainer = () => {
         <MapGraphicContainer />
       </div>
 
-      <div className="flex flex-row w-full">
+      <div className="flex flex-row bg-blue-themeLighterAlt w-full">
         <div className="flex flex-col basis-8/12 mt-4">
           <StatisticContainer />
         </div>

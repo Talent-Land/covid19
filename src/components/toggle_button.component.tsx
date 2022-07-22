@@ -1,21 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
+import AllWorldSVG from "../assets/svg/all_world.svg";
+import GraphicSVG from "../assets/svg/graphic.svg";
+import WorldSVG from "../assets/svg/world.svg";
 
 export const ToggleButton = () => {
+  const [isWorld_active, setisWorld_active] = useState(true);
+  const [isGraphic_active, setisGraphic_active] = useState(false);
+
+  const handleWorldButton = () => {
+    if (!isWorld_active) {
+      setisWorld_active(true);
+      setisGraphic_active(false);
+    }
+  };
+
+  const handleGraphicButton = () => {
+    if (!isGraphic_active) {
+      setisGraphic_active(true);
+      setisWorld_active(false);
+    }
+  };
+
   return (
-    <>
-      <label
-        htmlFor="checked-toggle"
-        className="inline-flex relative items-center cursor-pointer"
-      >
-        <input
-          type="checkbox"
-          value=""
-          id="checked-toggle"
-          className="sr-only peer"
-        />
-        <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-      </label>
-    </>
+    <div className="flex justify-end mr-2">
+      <div className="inline-flex rounded-xl shadow-md">
+        <button
+          onClick={() => handleWorldButton()}
+          type="button"
+          className={`${isWorld_active ? "bg-blue-themePrimary" : "bg-grayT-200 hover:bg-blue-themeLight"} rounded-l-xl px-4 py-2.5 `}
+        >
+          <AllWorldSVG classname={`${isWorld_active ? "text-whiteT" : "text-grayT-500"} text-black fill-current h-4`} title={false} />
+        </button>
+
+        <button
+        onClick={() => handleGraphicButton()}
+          type="button"
+          className={`${isGraphic_active ? "bg-blue-themePrimary" : "bg-grayT-200 hover:bg-blue-themeLight"} rounded-r-xl px-4 py-2.5`}
+        >
+          <GraphicSVG classname={`${isGraphic_active ? "text-whiteT" : "text-grayT-500"} text-black fill-current h-4`}  title={false} />
+        </button>
+      </div>
+    </div>
   );
 };
 
