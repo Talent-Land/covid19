@@ -1,12 +1,17 @@
 import React, { Dispatch, SetStateAction } from "react";
+import AllWorldSVG from "../assets/svg/all_world.svg";
 import FilterSVG from "../assets/svg/filter.svg";
+import GraphicSVG from "../assets/svg/graphic.svg";
 import MarsSVG from "../assets/svg/mars.svg";
+import VenusSVG from "../assets/svg/venus.svg";
 import Button from "../components/buttons/button.component";
 
 interface props {
   setfilterState: Dispatch<SetStateAction<boolean>>;
   filterState: boolean;
 }
+
+const studyTypeList = ["Prueba1", "Prueba2", "Prueba3", "Prueba4", "Prueba5"];
 
 export const FilterContainer = ({ setfilterState, filterState }: props) => {
   return (
@@ -15,16 +20,15 @@ export const FilterContainer = ({ setfilterState, filterState }: props) => {
         <div className="w-3/4">Filters</div>
         {/* FILTER BUTTON */}
         <div className="w-1/4 flex place-content-end">
-        <button
-          onClick={() => {
-            setfilterState(!filterState);
-          }}
-          className="rounded-xl bg-grayT-200 hover:bg-grayT-400 p-2"
-        >
-          <FilterSVG classname="text-blackT fill-current h-4" title={false} />
-        </button>
+          <button
+            onClick={() => {
+              setfilterState(!filterState);
+            }}
+            className="rounded-xl bg-grayT-200 hover:bg-grayT-400 p-2"
+          >
+            <FilterSVG classname="text-blackT fill-current h-4" title={false} />
+          </button>
         </div>
-        
       </div>
 
       {/* FILTERS */}
@@ -32,186 +36,174 @@ export const FilterContainer = ({ setfilterState, filterState }: props) => {
         <form className="flex flex-col">
           {/* COUNTRY */}
           <div className="flex flex-col pt-4">
-            <label htmlFor="Country">Select a country...</label>
-            <select name="Country" id="country">
-              <option value="Mexico">Mexico</option>
-              <option value="Mexico">Mexico</option>
-              <option value="Mexico">Mexico</option>
-              <option value="Mexico">Mexico</option>
-              <option value="Mexico">Mexico</option>
-              <option value="Mexico">Mexico</option>
+            <label htmlFor="Country" className="block mb-2 text-md font-medium">
+              Country:
+            </label>
+            <select
+              name="Country"
+              id="country"
+              className="border border-blue-themePrimary text-grayT-900 text-sm rounded-md block w-full p-2.5"
+            >
+              <option selected disabled>
+                Countries
+              </option>
               <option value="Mexico">Mexico</option>
             </select>
           </div>
 
           {/* GENDER */}
-          <div className="flex flex-col pt-4">
-            <label htmlFor="Gender" className="pb-2">
-              Gender
+          <div className="flex flex-row pt-4">
+            <label
+              htmlFor="Gender"
+              className="block mb-2 mr-4 text-md font-medium"
+            >
+              Gender:
             </label>
-            <div className="flex flex-row justify-between w-4/12">
-              <button>
-                <MarsSVG
-                  classname="text-blackT fill-current h-8"
-                  title={false}
-                />
-              </button>
+            <div className="flex mr-2">
+              <div className="inline-flex rounded-md  bg-whiteT">
+                <button
+                  type="button"
+                  className={`rounded-l-md px-4 py-1 border-r-2 border-grayT-400 hover:bg-blueT-800 hover:text-whiteT`}
+                >
+                  <MarsSVG classname={`fill-current h-6`} title={false} />
+                </button>
 
-              <button>
-                <MarsSVG
-                  classname="text-blackT fill-current h-8"
-                  title={false}
-                />
-              </button>
+                <button
+                  type="button"
+                  className={`px-4 py-1 border-r-2 border-grayT-400 hover:bg-redT-500 hover:text-whiteT`}
+                >
+                  <VenusSVG
+                    classname={` text-black fill-current h-6`}
+                    title={false}
+                  />
+                </button>
 
-              <button>
-                <MarsSVG
-                  classname="text-blackT fill-current h-8"
-                  title={false}
-                />
-              </button>
+                <button
+                  type="button"
+                  className={`px-4 py-1 border-r-2 border-grayT-400  hover:bg-purpleT-800 hover:text-whiteT`}
+                >
+                  <AllWorldSVG
+                    classname={` text-black fill-current h-6`}
+                    title={false}
+                  />
+                </button>
 
-              <button>
-                <MarsSVG
-                  classname="text-blackT fill-current h-8"
-                  title={false}
-                />
-              </button>
+                <button
+                  type="button"
+                  className={`rounded-r-md px-4 py-1 hover:bg-greenT-800 hover:text-whiteT`}
+                >
+                  <GraphicSVG
+                    classname={` text-black fill-current h-6`}
+                    title={false}
+                  />
+                </button>
+              </div>
             </div>
           </div>
 
           {/* INCLUSION AGE  */}
-          <div>
-            <label>Inclusion age:</label>
-            <div className="flex">
+          <div className="pt-4">
+            <label className="block mb-2 mr-4 text-md font-medium">
+              Inclusion age:
+            </label>
+
+            <div className="flex flex-row w-8/12">
               <div className="flex">
-                <label className="" htmlFor="grid-zip">
-                  min
+                <label className="block mb-2 text-md pr-2" htmlFor="min-age">
+                  min:
                 </label>
-                <input className="" id="grid-zip" type="text" placeholder="0" />
+                <input
+                  className="border border-blue-themePrimary text-grayT-900 text-sm rounded-md w-full px-2.5"
+                  id="min-age"
+                  type="number"
+                  max="120"
+                  placeholder="0"
+                />
               </div>
-              <label className="" htmlFor="grid-zip">
-                max
+
+              <div className="flex">
+                <label
+                  className="block mb-2 text-md px-2 py-2"
+                  htmlFor="max-age"
+                >
+                  max:
+                </label>
+                <input
+                  className="border border-blue-themePrimary text-grayT-900 text-sm rounded-md w-full px-2.5"
+                  id="max-age"
+                  type="number"
+                  max="120"
+                  placeholder="120"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-row gap-4">
+            {/* STUDY TYPE */}
+            <div className="flex flex-col pt-4">
+              <label className="block mb-2 mr-4 text-md font-medium">
+                Study type:
               </label>
-              <input
-                className=""
-                id="grid-zip"
-                type="text"
-                placeholder="90210"
-              />
-            </div>
-          </div>
 
-          {/* STUDY TYPE */}
-          <div className="flex flex-col">
-            <label>Study type:</label>
-            <div className="flex flex-row">
-              <div className="flex flex-col">
-                <div>
-                  <input
-                    id="link-checkbox"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                  />
-                  <label
-                    htmlFor="link-checkbox"
-                    className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                  >
-                    Observational
-                  </label>
+              <div className="flex flex-row">
+                <div className="flex flex-col mx-4">
+                  {studyTypeList.map((studyType, index) => (
+                    <div>
+                      <input
+                        id="link-checkbox"
+                        type="checkbox"
+                        value=""
+                        className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      />
+                      <label
+                        htmlFor="link-checkbox"
+                        className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                      >
+                        {studyType}
+                      </label>
+                    </div>
+                  ))}
                 </div>
 
-                <div>
-                  <input
-                    id="link-checkbox"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                  />
-                  <label
-                    htmlFor="link-checkbox"
-                    className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                  >
-                    Observational
-                  </label>
-                </div>
-
-                <div>
-                  <input
-                    id="link-checkbox"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                  />
-                  <label
-                    htmlFor="link-checkbox"
-                    className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                  >
-                    Observational
-                  </label>
-                </div>
-              </div>
-
-              <div className="flex flex-col">
-                <div>
-                  <input
-                    id="link-checkbox"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                  />
-                  <label
-                    htmlFor="link-checkbox"
-                    className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                  >
-                    Observational
-                  </label>
-                </div>
-
-                <div>
-                  <input
-                    id="link-checkbox"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                  />
-                  <label
-                    htmlFor="link-checkbox"
-                    className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                  >
-                    Observational
-                  </label>
-                </div>
-
-                <div>
-                  <input
-                    id="link-checkbox"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                  />
-                  <label
-                    htmlFor="link-checkbox"
-                    className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                  >
-                    Observational
-                  </label>
+                <div className="flex flex-col mx-4">
+                  {studyTypeList.map((studyType, index) => (
+                    <div>
+                      <input
+                        id="link-checkbox"
+                        type="checkbox"
+                        value=""
+                        className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      />
+                      <label
+                        htmlFor="link-checkbox"
+                        className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                      >
+                        {studyType}
+                      </label>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* TARGET SIZE */}
-          <div>
-            <label>Target size:</label>
-            <select name="TargetSize" id="targetSize">
-              <option value="Muchos">0 - 100</option>
-              <option value="Muchos">100 - 500</option>
-              <option value="Muchos">500 - 2,000</option>
-              <option value="Muchos">2,000 - 10,000</option>
-              <option value="Muchos">+10,000</option>
-            </select>
+            {/* TARGET SIZE */}
+            <div className="pt-4">
+              <label className="block mb-2 mr-4 text-md font-medium">
+                Target size:
+              </label>
+              <select
+                name="TargetSize"
+                id="targetSize"
+                className="border border-blue-themePrimary text-grayT-900 text-sm rounded-md block w-full p-2.5"
+              >
+                <option value="Muchos">0 - 100</option>
+                <option value="Muchos">100 - 500</option>
+                <option value="Muchos">500 - 2,000</option>
+                <option value="Muchos">2,000 - 10,000</option>
+                <option value="Muchos">+10,000</option>
+              </select>
+            </div>
           </div>
         </form>
       </div>

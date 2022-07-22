@@ -8,7 +8,7 @@ import ToggleButton from "../components/buttons/toggle_button.component";
 
 export const StatisticContainer = () => {
   return (
-    <div className="flex flex-col flex-grow ml-2">
+    <div className="flex flex-col flex-grow ml-10 h-fit">
       <div className="flex flex-row">
         {/* NUMBER OF RESEARCHS */}
         <StatisticCard

@@ -2,6 +2,7 @@ import React from "react";
 import MapGraphicContainer from "./map_graphic.container";
 import ResearchContainer from "./research.container";
 import StatisticContainer from "./statistic.container";
+import LogoAstraZeneca from "../assets/logo.png";
 
 export const MainContainer = () => {
   return (
@@ -9,14 +10,19 @@ export const MainContainer = () => {
       <div className="flex absolute bg-blue-themeLighterAlt w-full h-full -z-10">
         <MapGraphicContainer />
       </div>
-
-      <div className="flex flex-row bg-blue-themeLighterAlt w-full">
-        <div className="flex flex-col basis-8/12 mt-4">
-          <StatisticContainer />
+      <div className="flex flex-col bg-blue-themeLighterAlt w-full">
+        <div className="flex place-content-start place-items-center bg-blue-themePrimary w-full h-12">
+          <p className="text-3xl text-whiteT ml-10">Astra Zeneca</p>
         </div>
+        <div className="flex flex-row w-full gap-10">
+          <div className="flex flex-col basis-8/12 mt-4">
+            <StatisticContainer />
+            {/* <ResearchInfoContainer/> */}
+          </div>
 
-        <div className="flex flex-col basis-4/12 mt-4">
-          <ResearchContainer />
+          <div className="flex flex-col basis-4/12 mt-4">
+            <ResearchContainer />
+          </div>
         </div>
       </div>
     </>

@@ -7,7 +7,7 @@ const ResearchContainer = () => {
   const [filterComponent, setfilterComponent] = useState(false);
 
   return (
-    <div className="flex flex-col absolute bg-transparent">
+    <div className="flex flex-col absolute bg-transparent mr-10">
       {/* SEARCH BAR */}
       <div className="">
         <SearchBar
