@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import AllWorldSVG from "../assets/svg/all_world.svg";
 import FilterSVG from "../assets/svg/filter.svg";
 import GraphicSVG from "../assets/svg/graphic.svg";
@@ -14,10 +14,22 @@ interface props {
 const studyTypeList = ["Prueba1", "Prueba2", "Prueba3", "Prueba4", "Prueba5"];
 
 export const FilterContainer = ({ setfilterState, filterState }: props) => {
+  const [isClickedFilters, setisClickedFilters] = useState(false);
+  const [isClickedCancel, setisClickedCancel] = useState(false);
+
+  const handleFilters = () => {
+    if(isClickedFilters){
+      setfilterState(false);
+    }
+    if(isClickedCancel){
+      setfilterState(false);
+    }
+  };
+
   return (
     <div className="rounded-xl bg-grayT-200 h-fit mr-2 mt-2 pb-2">
       <div className="flex flex-row">
-        <div className="w-3/4">Filters</div>
+        <div className="w-3/4 text-3xl mx-4">Filters</div>
         {/* FILTER BUTTON */}
         <div className="w-1/4 flex place-content-end">
           <button
@@ -215,13 +227,18 @@ export const FilterContainer = ({ setfilterState, filterState }: props) => {
             text={"Aplicar filtros"}
             color={"bg-blueT-400"}
             colorHover={"hover:bg-blueT-600"}
+            isClicked={isClickedFilters}
+            setisClicked={setisClickedFilters}
           />
 
           <Button
             text={"Cancelar"}
             color={"bg-redT-400"}
             colorHover={"hover:bg-redT-600"}
+            isClicked={isClickedCancel}
+            setisClicked={setisClickedCancel}
           />
+          <>{handleFilters()}</>
         </div>
       </div>
     </div>
