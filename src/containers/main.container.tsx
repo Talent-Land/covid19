@@ -29,6 +29,8 @@ export const MainContainer = () => {
             </div>
           </div>
 
+          <ResearchInfoContainer />
+
           <div className="flex flex-col basis-4/12 mt-4 bg-transparent mr-10 overflow-y-auto">
             <ResearchContainer />
           </div>

@@ -17,7 +17,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<MainContainer />} />
-        <Route path="/sandbox" element={<Sandbox />} />
+        {/* <Route path="/sandbox" element={<Sandbox />} /> */}
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
