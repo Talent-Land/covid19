@@ -33,8 +33,8 @@ export const ToggleButton = (props: Props) => {
           type="button"
           className={`${
             isWorld_active
-              ? "bg-blue-themePrimary rounded-r-xl"
-              : "bg-grayT-200 hover:bg-blue-themeLight hover:rounded-r-xl"
+              ? "bg-blue-themePrimary"
+              : "bg-grayT-200 hover:bg-blue-themeLight"
           } rounded-l-xl px-4 py-2.5 `}
         >
           <AllWorldSVG
@@ -54,9 +54,9 @@ export const ToggleButton = (props: Props) => {
           type="button"
           className={`${
             isGraphic_active
-              ? "bg-blue-themePrimary rounded-l-xl"
-              : "bg-grayT-200 hover:bg-blue-themeLight hover:rounded-l-xl"
-          } rounded-r-xl px-4 py-2.5`}
+              ? "bg-blue-themePrimary"
+              : "bg-grayT-200 hover:bg-blue-themeLight"
+          } px-4 py-2.5`}
         >
           <GraphicSVG
             classname={`${
@@ -75,8 +75,8 @@ export const ToggleButton = (props: Props) => {
           type="button"
           className={`${
             isNodeGraph_active
-              ? "bg-blue-themePrimary rounded-l-xl"
-              : "bg-grayT-200 hover:bg-blue-themeLight hover:rounded-l-xl"
+              ? "bg-blue-themePrimary"
+              : "bg-grayT-200 hover:bg-blue-themeLight"
           } rounded-r-xl px-4 py-2.5`}
         >
           <NodesSVG

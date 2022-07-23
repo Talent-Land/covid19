@@ -6,8 +6,8 @@ interface props {}
 
 const ResearchInfoContainer = ({}: props) => {
   return (
-    <div className="flex flex-col flex-grow absolute w-8/12 ml-10 mt-20 mr-4">
-      <div className="flex flex-col rounded-md bg-blue-themeDark/50 mr-10 mt-2 p-4">
+    <div className="flex flex-col flex-grow absolute w-8/12 ml-4 mt-20 mr-4">
+      <div className="flex flex-col rounded-md bg-blue-themePrimary/75 mr-16 mt-2">
         {/* CLOSE */}
         <div className="flex flex-col place-items-end">
           <button>
