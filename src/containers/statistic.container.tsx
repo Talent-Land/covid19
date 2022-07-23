@@ -13,6 +13,11 @@ export const StatisticContainer = () => {
   const [isWorld_active, setisWorld_active] = useState(true);
   const [isGraphic_active, setisGraphic_active] = useState(false);
   const [isNodeGraph_active, setisNodeGraph_active] = useState(false);
+  const [titleComponent, settitleComponent] = useState("Research map");
+
+  const handleToggleClick = (newTitle: string) => {
+    settitleComponent(newTitle);
+  };
 
   return (
     <>
@@ -77,6 +82,11 @@ export const StatisticContainer = () => {
           </div>
         </StatisticCard>
       </div>
+
+      <div className="flex flex-grow place-content-center rounded-md text-2xl text-blue-themePrimary font-bold">
+        <div className="p-2">{titleComponent}</div>
+      </div>
+
       {isWorld_active && <MapContainer />}
       {isGraphic_active && <ChartsContainer />}
       {isNodeGraph_active && <GraphContainer />}
@@ -84,9 +94,11 @@ export const StatisticContainer = () => {
         isWorld_active={isWorld_active}
         isGraphic_active={isGraphic_active}
         isNodeGraph_active={isNodeGraph_active}
+        titleComponent={titleComponent}
         setisGraphic_active={setisGraphic_active}
         setisWorld_active={setisWorld_active}
         setisNodeGraph_active={setisNodeGraph_active}
+        settitleComponent={settitleComponent}
       />
     </>
   );
