@@ -12,7 +12,7 @@ export const MainContainer = () => {
       </div>
       <div className="flex flex-col bg-blue-themeLighterAlt">
         <div className="flex place-content-start place-items-center bg-blue-themePrimary w-full h-12">
-          <p className="text-3xl text-whiteT ml-10">Astra Zeneca</p>
+          <p className="text-3xl text-whiteT ml-10">ResearchSaver.com</p>
         </div>
         <div className="flex flex-row gap-10 overflow-y-auto">
           <div className="flex flex-col basis-8/12 mt-4">
