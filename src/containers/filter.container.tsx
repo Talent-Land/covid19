@@ -83,7 +83,7 @@ export const FilterContainer = ({ setfilterState, filterState }: props) => {
                   onClick={() => handleGenderFilter("male")}
                   type="button"
                   className={`${
-                    isGender == "male"
+                    isGender === "male"
                       ? "bg-blueT-500 text-whiteT"
                       : "hover:bg-blueT-600 hover:text-whiteT"
                   } px-4 py-1 rounded-l-md border-r-2 border-grayT-400`}
@@ -95,22 +95,19 @@ export const FilterContainer = ({ setfilterState, filterState }: props) => {
                   onClick={() => handleGenderFilter("female")}
                   type="button"
                   className={`${
-                    isGender == "female"
+                    isGender === "female"
                       ? "bg-redT-500 text-whiteT"
                       : "hover:bg-redT-600 hover:text-whiteT"
                   } px-4 py-1 border-r-2 border-grayT-400`}
                 >
-                  <VenusSVG
-                    classname={`fill-current h-6`}
-                    title={false}
-                  />
+                  <VenusSVG classname={`fill-current h-6`} title={false} />
                 </button>
 
                 <button
                   onClick={() => handleGenderFilter("not specified")}
                   type="button"
                   className={`${
-                    isGender == "not specified"
+                    isGender === "not specified"
                       ? "bg-purpleT-600 text-whiteT"
                       : "hover:bg-purpleT-800 hover:text-whiteT"
                   } px-4 py-1`}
@@ -125,7 +122,7 @@ export const FilterContainer = ({ setfilterState, filterState }: props) => {
                   onClick={() => handleGenderFilter("not known")}
                   type="button"
                   className={`${
-                    isGender == "not known"
+                    isGender === "not known"
                       ? "bg-greenT-500 text-whiteT"
                       : "hover:bg-greenT-600 hover:text-whiteT"
                   } rounded-r-md px-4 py-1`}
@@ -157,10 +154,7 @@ export const FilterContainer = ({ setfilterState, filterState }: props) => {
               </div>
 
               <div className="flex">
-                <label
-                  className="block mb-2 text-md px-2"
-                  htmlFor="max-age"
-                >
+                <label className="block mb-2 text-md px-2" htmlFor="max-age">
                   max:
                 </label>
                 <input

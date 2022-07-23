@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import ResearchInfoContainer from "../../containers/research_info.container";
+import { useState } from "react";
 
 interface props {
   title: string;
@@ -10,9 +9,10 @@ export const ResearchCard = ({ title, content }: props) => {
   const [isOverview_active, setisOverview_active] = useState(false);
 
   return (
-    <div 
-    onClick={() => setisOverview_active(true)}
-    className="hover:cursor-pointer bg-transparent hover:bg-blue-themeLighter shadow-md rounded-md drop-shadow-3xl mr-2 my-2 p-2">
+    <div
+      onClick={() => setisOverview_active(true)}
+      className="hover:cursor-pointer bg-transparent hover:bg-blue-themeLighter shadow-md rounded-md drop-shadow-3xl mr-2 my-2 p-2"
+    >
       {/* RESEARCH TITLE */}
       <div className="font-bold pb-2">{title}</div>
       <hr></hr>
