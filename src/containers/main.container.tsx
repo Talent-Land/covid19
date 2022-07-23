@@ -2,13 +2,15 @@ import ResearchContainer from "./research.container";
 import StatisticContainer from "./statistic.container";
 import LogoAstraZeneca from "../assets/logo.png";
 import Calderon from "../assets/Calderon.png";
-import ResearchInfoContainer from "./research_info.container";
 import LifeSaverSVG from "../assets/svg/life_saver.svg";
+import { useState } from "react";
 
 export const MainContainer = () => {
+  const [runExample, setrunExample] = useState(false);
+
   return (
     <>
-      <div className="flex flex-col bg-transparent">
+      <div className="flex flex-col bg-transparent overflow-y-auto">
         {/* NAVIGATION BAR */}
         <div className="flex place-content-between bg-blue-themePrimary w-full">
           <div className="flex flex-row content-center text-3xl text-whiteT ml-10">
@@ -23,11 +25,14 @@ export const MainContainer = () => {
 
         <div className="flex flex-row gap-4 overflow-y-auto">
           <div className="flex flex-col basis-8/12 m-4">
-            <StatisticContainer />
+            <StatisticContainer runExample={runExample} />
           </div>
 
           <div className="flex flex-col basis-4/12 mt-4 bg-transparent mr-10 overflow-y-auto">
-            <ResearchContainer />
+            <ResearchContainer
+              setrunExample={setrunExample}
+              runExample={runExample}
+            />
           </div>
 
           <div className="flex absolute h-full top-0  items-end ml-2 ">

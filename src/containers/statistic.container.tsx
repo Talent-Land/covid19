@@ -7,17 +7,34 @@ import ToggleButton from "../components/buttons/toggle_button.component";
 import MapContainer from "./map.container";
 import { ChartsContainer } from "./charts.container";
 import { GraphContainer } from "./graph.container";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
-export const StatisticContainer = () => {
-  const [isWorld_active, setisWorld_active] = useState(true);
-  const [isGraphic_active, setisGraphic_active] = useState(false);
-  const [isNodeGraph_active, setisNodeGraph_active] = useState(false);
+interface Props {
+  runExample: boolean;
+}
+
+export const StatisticContainer = (props: Props) => {
+  const { runExample } = props;
+
+  const [visualization, setVisualization] = useState("map");
+
   const [titleComponent, settitleComponent] = useState("Research map");
 
-  const handleToggleClick = (newTitle: string) => {
-    settitleComponent(newTitle);
+  const returnVisualization = () => {
+    if (visualization === "map") {
+      return <MapContainer />;
+    } else if (visualization === "charts") {
+      return <ChartsContainer />;
+    } else if (visualization === "graph") {
+      return <GraphContainer />;
+    }
   };
+
+  useEffect(() => {
+    if (runExample) {
+      setVisualization("graph");
+    }
+  }, [runExample]);
 
   return (
     <>
@@ -87,21 +104,14 @@ export const StatisticContainer = () => {
         <div className="flex place-content-center w-full">{titleComponent}</div>
         <div className="flex">
           <ToggleButton
-            isWorld_active={isWorld_active}
-            isGraphic_active={isGraphic_active}
-            isNodeGraph_active={isNodeGraph_active}
-            titleComponent={titleComponent}
-            setisGraphic_active={setisGraphic_active}
-            setisWorld_active={setisWorld_active}
-            setisNodeGraph_active={setisNodeGraph_active}
+            visualization={visualization}
+            setVisualization={setVisualization}
             settitleComponent={settitleComponent}
           />
         </div>
       </div>
 
-      {isWorld_active && <MapContainer />}
-      {isGraphic_active && <ChartsContainer />}
-      {isNodeGraph_active && <GraphContainer />}
+      {returnVisualization()}
     </>
   );
 };
