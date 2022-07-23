@@ -27,9 +27,6 @@ function App() {
 const Layout = () => {
   return (
     <div className="flex flex-col h-screen overflow-hidden">
-      <div className="h-10 w-full flex flex-shrink-0 bg-blue-themePrimary">
-        <p className="text-3xl text-whiteT ml-10">ResearchSaver.com</p>
-      </div>
       <Outlet />
     </div>
   );

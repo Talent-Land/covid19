@@ -16,10 +16,7 @@ export const MainContainer = () => {
           </div>
 
           <div className="flex flex-row items-center text-3xl text-[#2f2874] mr-10 py-2">
-            <LifeSaverSVG
-              classname="fill-current h-8"
-              title={false}
-            />
+            <LifeSaverSVG classname="fill-current h-8" title={false} />
             <p className="text-3xl font-bold ml-2 py-2">LifeSaver.com</p>
           </div>
         </div>
@@ -30,7 +27,7 @@ export const MainContainer = () => {
             {/* <ResearchInfoContainer /> */}
           </div>
 
-        {/* <ResearchInfoContainer /> */}
+          {/* <ResearchInfoContainer /> */}
 
           <div className="flex absolute h-full top-0  items-end ml-2 ">
             <a href="https://www.youtube.com/watch?v=djV11Xbc914">
@@ -42,10 +39,10 @@ export const MainContainer = () => {
             </a>
           </div>
         </div>
-      </div>
 
-      <div className="flex flex-col basis-4/12 mt-4 bg-transparent mr-10 overflow-y-auto">
-        <ResearchContainer />
+        <div className="flex flex-col basis-4/12 mt-4 bg-transparent mr-10 overflow-y-auto">
+          <ResearchContainer />
+        </div>
       </div>
     </>
   );
