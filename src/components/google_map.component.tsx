@@ -13,13 +13,13 @@ export const GoogleMap = () => {
 
   useEffect(() => {
     if (ref.current && !map) {
-      setMap(new window.google.maps.Map(ref.current, { center, zoom: 4 }));
+      setMap(new window.google.maps.Map(ref.current, { center, zoom: 4, disableDefaultUI: true }));
     }
   }, [ref, map]);
 
   return (
     <Wrapper apiKey={"AIzaSyDl5Dzght-xb4Y9vieduMNP5IJVoTDVtZQ"} render={render}>
-      <div ref={ref} className="w-64 h-64" />
+      <div ref={ref} className="w-72 h-72" />
     </Wrapper>
   );
 };

@@ -1,4 +1,4 @@
-import { GoogleMap } from "./map.component";
+import { GoogleMap } from "./google_map.component";
 
 export const ClincStudyOverview = () => {
   return (

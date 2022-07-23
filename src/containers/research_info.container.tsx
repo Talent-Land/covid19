@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CrossSVG from "../assets/svg/cross.svg";
-import { GoogleMap } from "../components/map.component";
+import { GoogleMap } from "../components/google_map.component";
 
 interface props {}
 
