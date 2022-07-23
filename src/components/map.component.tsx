@@ -19,7 +19,7 @@ export const GoogleMap = () => {
 
   return (
     <Wrapper apiKey={"AIzaSyDl5Dzght-xb4Y9vieduMNP5IJVoTDVtZQ"} render={render}>
-      <div ref={ref} className="w-64 h-64"/>
+      <div ref={ref} className="w-64 h-64" />
     </Wrapper>
   );
 };

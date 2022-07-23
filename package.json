@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "@types/google.maps": "^3.49.2",
+    "@types/googlemaps": "^3.43.3",
     "@types/react-cytoscapejs": "^1.2.2",
     "@types/react-plotly.js": "^2.5.1",
     "autoprefixer": "^10.4.7",
