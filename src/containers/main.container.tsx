@@ -17,7 +17,7 @@ export const MainContainer = () => {
         <div className="flex flex-row gap-4 overflow-y-auto">
           <div className="flex flex-col basis-8/12 m-4">
             <StatisticContainer />
-            {/* <ResearchInfoContainer/> */}
+            <ResearchInfoContainer/>
           </div>
 
           <div className="flex flex-col basis-4/12 mt-4 bg-transparent mr-10 overflow-y-auto">
