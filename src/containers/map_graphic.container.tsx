@@ -8,16 +8,45 @@ export const MapGraphicContainer = () => {
       <Plot
         data={[
           {
-            x: [1, 2, 3],
-            y: [2, 6, 3],
             type: "choropleth",
-            
-            mode: "lines+markers",
-            marker: { color: "red" },
+            locations: ["US", "CA", "IN", "NL", "BR"],
+            z: [1, 2, 3, 4, 5],
+            text: ["United States", "Canada", "India", "Netherlands", "Brazil"],
+            colorscale: [
+              [0, "rgb(5, 10, 172)"],
+              [0.35, "rgb(40, 60, 190)"],
+              [0.5, "rgb(70, 100, 245)"],
+              [0.6, "rgb(90, 120, 245)"],
+              [0.7, "rgb(106, 137, 247)"],
+              [1, "rgb(220, 220, 220)"],
+            ],
+            reversescale: true,
+            marker: {
+              line: {
+                color: "rgb(180,180,180)",
+                width: 0.5,
+              },
+            },
+            zmin: 0,
+            colorbar: {
+              tickprefix: "$",
+              title: "GDP<br>Billions US$",
+            },
           },
-          { type: "bar", x: [1, 2, 3], y: [2, 5, 3] },
         ]}
-        layout={{ width: 320, height: 240, title: "A Fancy Plot" }}
+        layout={{
+          width: 320,
+          height: 240,
+          title:
+            '2014 Global GDP<br>Source: <a href="https://www.cia.gov/library/publications/the-world-factbook/fields/2195.html"> CIA World Factbook</a>',
+          geo: {
+            showframe: false,
+            showcoastlines: false,
+            projection: {
+              type: "mercator",
+            },
+          },
+        }}
       />
     </div>
   );

@@ -7,7 +7,7 @@ import LogoAstraZeneca from "../assets/logo.png";
 export const MainContainer = () => {
   return (
     <>
-      <div className="flex absolute bg-blue-themeLighterAlt w-full h-full -z-10">
+      <div className="flex absolute bg-blue-themeLighterAlt z-10">
         <MapGraphicContainer />
       </div>
       <div className="flex flex-col bg-blue-themeLighterAlt">

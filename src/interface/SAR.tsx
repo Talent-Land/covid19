@@ -52,7 +52,7 @@ export namespace SAR {
     export interface CountryClinicalResearch {
         id: number;
         id_country: number;
-        id_clinicalResearch;
+        id_clinicalResearch: number;
     }
 
     export interface Gender {
