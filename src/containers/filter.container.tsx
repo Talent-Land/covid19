@@ -14,29 +14,35 @@ interface props {
 const studyTypeList = ["Prueba1", "Prueba2", "Prueba3", "Prueba4", "Prueba5"];
 
 export const FilterContainer = ({ setfilterState, filterState }: props) => {
+  const [isGender, setisGender] = useState("");
   const [isClickedFilters, setisClickedFilters] = useState(false);
   const [isClickedCancel, setisClickedCancel] = useState(false);
 
   const handleFilters = () => {
-    if(isClickedFilters){
+    if (isClickedFilters) {
       setfilterState(false);
     }
-    if(isClickedCancel){
+    if (isClickedCancel) {
       setfilterState(false);
     }
+  };
+
+  const handleGenderFilter = (state: string) => {
+    setisGender(state);
+    console.log(isGender);
   };
 
   return (
     <div className="rounded-xl bg-grayT-200 h-fit mr-2 mt-2 pb-2">
       <div className="flex flex-row">
-        <div className="w-3/4 text-3xl mx-4">Filters</div>
+        <div className="w-3/4 text-3xl mx-4 mt-4">Filters</div>
         {/* FILTER BUTTON */}
         <div className="w-1/4 flex place-content-end">
           <button
             onClick={() => {
               setfilterState(!filterState);
             }}
-            className="rounded-xl bg-grayT-200 hover:bg-grayT-400 p-2"
+            className="rounded-xl bg-grayT-200 hover:bg-grayT-400 px-2 mb-4"
           >
             <FilterSVG classname="text-blackT fill-current h-4" title={false} />
           </button>
@@ -74,25 +80,40 @@ export const FilterContainer = ({ setfilterState, filterState }: props) => {
             <div className="flex mr-2">
               <div className="inline-flex rounded-md  bg-whiteT">
                 <button
+                  onClick={() => handleGenderFilter("male")}
                   type="button"
-                  className={`rounded-l-md px-4 py-1 border-r-2 border-grayT-400 hover:bg-blueT-800 hover:text-whiteT`}
+                  className={`${
+                    isGender == "male"
+                      ? "bg-blueT-500 text-whiteT"
+                      : "hover:bg-blueT-600 hover:text-whiteT"
+                  } px-4 py-1 rounded-l-md border-r-2 border-grayT-400`}
                 >
                   <MarsSVG classname={`fill-current h-6`} title={false} />
                 </button>
 
                 <button
+                  onClick={() => handleGenderFilter("female")}
                   type="button"
-                  className={`px-4 py-1 border-r-2 border-grayT-400 hover:bg-redT-500 hover:text-whiteT`}
+                  className={`${
+                    isGender == "female"
+                      ? "bg-redT-500 text-whiteT"
+                      : "hover:bg-redT-600 hover:text-whiteT"
+                  } px-4 py-1 border-r-2 border-grayT-400`}
                 >
                   <VenusSVG
-                    classname={` text-black fill-current h-6`}
+                    classname={`fill-current h-6`}
                     title={false}
                   />
                 </button>
 
                 <button
+                  onClick={() => handleGenderFilter("not specified")}
                   type="button"
-                  className={`px-4 py-1 border-r-2 border-grayT-400  hover:bg-purpleT-800 hover:text-whiteT`}
+                  className={`${
+                    isGender == "not specified"
+                      ? "bg-purpleT-600 text-whiteT"
+                      : "hover:bg-purpleT-800 hover:text-whiteT"
+                  } px-4 py-1`}
                 >
                   <AllWorldSVG
                     classname={` text-black fill-current h-6`}
@@ -101,13 +122,15 @@ export const FilterContainer = ({ setfilterState, filterState }: props) => {
                 </button>
 
                 <button
+                  onClick={() => handleGenderFilter("not known")}
                   type="button"
-                  className={`rounded-r-md px-4 py-1 hover:bg-greenT-800 hover:text-whiteT`}
+                  className={`${
+                    isGender == "not known"
+                      ? "bg-greenT-500 text-whiteT"
+                      : "hover:bg-greenT-600 hover:text-whiteT"
+                  } rounded-r-md px-4 py-1`}
                 >
-                  <GraphicSVG
-                    classname={` text-black fill-current h-6`}
-                    title={false}
-                  />
+                  <GraphicSVG classname={`fill-current h-6`} title={false} />
                 </button>
               </div>
             </div>
@@ -135,7 +158,7 @@ export const FilterContainer = ({ setfilterState, filterState }: props) => {
 
               <div className="flex">
                 <label
-                  className="block mb-2 text-md px-2 py-2"
+                  className="block mb-2 text-md px-2"
                   htmlFor="max-age"
                 >
                   max:
@@ -225,16 +248,16 @@ export const FilterContainer = ({ setfilterState, filterState }: props) => {
         <div>
           <Button
             text={"Aplicar filtros"}
-            color={"bg-blueT-400"}
-            colorHover={"hover:bg-blueT-600"}
+            color={"bg-blue-themePrimary"}
+            colorHover={"hover:bg-blue-themeDark"}
             isClicked={isClickedFilters}
             setisClicked={setisClickedFilters}
           />
 
           <Button
             text={"Cancelar"}
-            color={"bg-redT-400"}
-            colorHover={"hover:bg-redT-600"}
+            color={"bg-redT-600"}
+            colorHover={"hover:bg-redT-700"}
             isClicked={isClickedCancel}
             setisClicked={setisClickedCancel}
           />
