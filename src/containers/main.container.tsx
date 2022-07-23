@@ -9,7 +9,7 @@ export const MainContainer = () => {
   return (
     <>
       <div className="flex flex-col bg-transparent">
-        <div className="flex place-content-between bg-blue-themePrimary w-full h-18">
+        <div className="flex place-content-between bg-blue-themePrimary w-full h-24">
           {/* NAVIGATION BAR */}
           <div className="flex flex-row content-center text-3xl text-whiteT ml-10">
             <img src={LogoAstraZeneca} alt="AstraZeneca" className="h-14" />
