@@ -9,19 +9,18 @@ export const MainContainer = () => {
   return (
     <>
       <div className="flex flex-col bg-transparent">
-        <div className="flex place-content-between place-items-center bg-blue-themePrimary w-full h-12">
+        <div className="flex place-content-between bg-blue-themePrimary w-full h-18">
           {/* NAVIGATION BAR */}
-          <div className="flex flex-row items-center text-3xl text-whiteT ml-10 py-2">
-            <img src={LogoAstraZeneca} alt="AstraZeneca" className="h-8" />
-            <p className="text-whiteT ml-2">AstraZeneca</p>
+          <div className="flex flex-row content-center text-3xl text-whiteT ml-10">
+            <img src={LogoAstraZeneca} alt="AstraZeneca" className="h-14" />
           </div>
 
-          <div className="flex flex-row items-center text-3xl text-whiteT mr-10 py-2">
+          <div className="flex flex-row items-center text-3xl text-[#2f2874] mr-10 py-2">
             <LifeSaverSVG
-              classname="text-whiteT fill-current h-8"
+              classname="fill-current h-8"
               title={false}
             />
-            <p className="text-3xl text-whiteT ml-2 py-2">LifeSaver.com</p>
+            <p className="text-3xl font-bold ml-2 py-2">LifeSaver.com</p>
           </div>
         </div>
 
