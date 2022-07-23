@@ -7,17 +7,15 @@ const ResearchContainer = () => {
   const [filterComponent, setfilterComponent] = useState(false);
 
   return (
-    <div className="flex flex-col absolute bg-transparent mr-10">
+    <>
       {/* SEARCH BAR */}
-      <div className="">
-        <SearchBar
-          setfilterState={setfilterComponent}
-          filterState={filterComponent}
-        />
-      </div>
+      <SearchBar
+        setfilterState={setfilterComponent}
+        filterState={filterComponent}
+      />
 
       {/* RESEARCH CARDS */}
-      <div className="">
+      <div className="flex-col overflow-y-auto">
         <ResearchCard
           title={"TEST 1"}
           content={
@@ -71,7 +69,7 @@ const ResearchContainer = () => {
       ) : (
         ""
       )}
-    </div>
+    </>
   );
 };
 
