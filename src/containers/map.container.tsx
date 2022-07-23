@@ -31,6 +31,7 @@ export const MapContainer = () => {
                 width: 0.5,
               },
             },
+            fillcolor: '#a9dcf2',
             zmin: 0,
             showscale: false,
             automargin: true,
