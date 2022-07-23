@@ -6,9 +6,11 @@ interface Props {
   isWorld_active: boolean;
   isGraphic_active: boolean;
   isNodeGraph_active: boolean;
+  titleComponent: string;
   setisWorld_active: (value: boolean) => void;
   setisGraphic_active: (value: boolean) => void;
   setisNodeGraph_active: (value: boolean) => void;
+  settitleComponent: (value: string) => void;
 }
 
 export const ToggleButton = (props: Props) => {
@@ -16,9 +18,11 @@ export const ToggleButton = (props: Props) => {
     isWorld_active,
     isGraphic_active,
     isNodeGraph_active,
+    titleComponent,
     setisWorld_active,
     setisGraphic_active,
     setisNodeGraph_active,
+    settitleComponent,
   } = props;
 
   return (
@@ -29,6 +33,7 @@ export const ToggleButton = (props: Props) => {
             setisWorld_active(true);
             setisGraphic_active(false);
             setisNodeGraph_active(false);
+            settitleComponent("Research Map");
           }}
           type="button"
           className={`${
@@ -50,6 +55,7 @@ export const ToggleButton = (props: Props) => {
             setisWorld_active(false);
             setisGraphic_active(true);
             setisNodeGraph_active(false);
+            settitleComponent("Research graphics");
           }}
           type="button"
           className={`${
@@ -71,6 +77,7 @@ export const ToggleButton = (props: Props) => {
             setisWorld_active(false);
             setisGraphic_active(false);
             setisNodeGraph_active(true);
+            settitleComponent("Research graph");
           }}
           type="button"
           className={`${
