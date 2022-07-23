@@ -16,8 +16,11 @@ const ResearchInfoContainer = ({}: props) => {
         </div>
 
         <div className="flex flex-row w-full p-2 text-blackT border-blackT border-2">
-          <div className="w-8/12">Investigación de covid hecha mientras tenía covid</div>
-          <div className="w-4/12">Inclusion age: 0 - 54</div>
+          <div className="w-10/12">
+            <p className="block mb-2 text-md font-medium">Public title:</p>{" "}
+            Investigación de covid hecha mientras tenía covid
+          </div>
+          <div className="w-2/12">Inclusion age: 0 - 54</div>
         </div>
 
         <div className="flex flex-row w-full p-2 text-blackT border-blackT border-2">
@@ -27,29 +30,33 @@ const ResearchInfoContainer = ({}: props) => {
 
         <div className="flex flex-row w-full p-2 text-blackT border-blackT border-2">
           <div className="w-4/12">Results posted in: 22 de Julio del 2022</div>
-          <div className="w-4/12">Results completed in: 9 de Septiembre del 2022</div>
+          <div className="w-4/12">
+            Results completed in: 9 de Septiembre del 2022
+          </div>
         </div>
 
         <div className="flex flex-row w-full p-2 text-blackT border-blackT border-2">
           <div className="w-7/12">
             <div className="w-full p-2 text-blackT border-blackT border-2">
-              <div className="">Map</div>
+              <div className="">URL: </div>
             </div>
 
             <div className="w-full p-2 text-blackT border-blackT border-2">
-              <div className="">Map</div>
+              <div className="">Phase</div>
             </div>
 
             <div className="w-full p-2 text-blackT border-blackT border-2">
-              <div className="">Map</div>
+              <div className="">Contact name:</div>
             </div>
 
             <div className="w-full p-2 text-blackT border-blackT border-2">
-              <div className="">Map</div>
+              <div className="">Contact Address:</div>
             </div>
 
             <div className="w-full p-2 text-blackT border-blackT border-2">
-              <div className="">Map</div>
+              <div className="">
+                <GoogleMap />
+              </div>
             </div>
           </div>
 
@@ -58,7 +65,7 @@ const ResearchInfoContainer = ({}: props) => {
               <div className="">Map</div>
             </div>
             <div className="flex flex-col w-full p-2 text-blackT border-blackT border-2">
-              <div className=""><GoogleMap/></div>
+              <div className="">content de source registry</div>
             </div>
           </div>
         </div>
