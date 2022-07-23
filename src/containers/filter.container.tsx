@@ -1,5 +1,6 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
 import AllWorldSVG from "../assets/svg/all_world.svg";
+import CrossSVG from "../assets/svg/cross.svg";
 import FilterSVG from "../assets/svg/filter.svg";
 import GraphicSVG from "../assets/svg/graphic.svg";
 import MarsSVG from "../assets/svg/mars.svg";
@@ -33,7 +34,7 @@ export const FilterContainer = ({ setfilterState, filterState }: props) => {
   };
 
   return (
-    <div className="rounded-xl bg-grayT-200 h-fit mr-2 mt-2 pb-2">
+    <div className="rounded-md bg-grayT-200 h-fit w-full mt-2 pb-2">
       <div className="flex flex-row">
         <div className="w-3/4 text-3xl mx-4 mt-4">Filters</div>
         {/* FILTER BUTTON */}
@@ -42,9 +43,9 @@ export const FilterContainer = ({ setfilterState, filterState }: props) => {
             onClick={() => {
               setfilterState(!filterState);
             }}
-            className="rounded-xl bg-grayT-200 hover:bg-grayT-400 px-2 mb-4"
+            className="rounded-xl bg-grayT-200 px-2 mb-4"
           >
-            <FilterSVG classname="text-blackT fill-current h-4" title={false} />
+            <CrossSVG classname="text-blackT fill-current h-6 hover:text-grayT-400" title={false} />
           </button>
         </div>
       </div>

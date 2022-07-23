@@ -4,6 +4,13 @@ import "../App.css";
 import { NotFound } from "../components/not_found_404.component";
 import { Sandbox } from "../components/sandbox.component";
 import MainContainer from "../containers/main.container";
+import {
+  getAllClinicalResearch,
+  getAllCountries,
+  getAllGenders,
+  getAllStudyTypes,
+  getCountryClinicalResearch,
+} from "../api/api.endpoint";
 
 function App() {
   return (

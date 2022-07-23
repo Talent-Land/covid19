@@ -60,7 +60,7 @@ const ResearchContainer = () => {
       </div>
 
       {filterComponent ? (
-        <div className="absolute w-full mr-4">
+        <div className="absolute transition ease-out delay-150 duration-300 ml-1">
           <FilterContainer
             setfilterState={setfilterComponent}
             filterState={filterComponent}

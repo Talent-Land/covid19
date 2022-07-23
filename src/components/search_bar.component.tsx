@@ -9,7 +9,7 @@ interface props {
 
 export const SearchBar = ({ setfilterState, filterState }: props) => {
   return (
-    <div className="flex mt-2 w-full">
+    <div className="flex mt-2 ml-1">
       {/* SEARCH BAR */}
       <form className="w-11/12">
         <label htmlFor="default-search" className="text-grayT-900 sr-only">
