@@ -16,6 +16,8 @@ interface Props {
 export const StatisticContainer = (props: Props) => {
   const { runExample } = props;
 
+  const randomVariable = "randomVariable";
+
   const [visualization, setVisualization] = useState("map");
 
   const [titleComponent, settitleComponent] = useState("Research map");
