@@ -17,44 +17,44 @@ const ResearchContainer = () => {
       {/* RESEARCH CARDS */}
       <div className="flex-col overflow-y-auto">
         <ResearchCard
-          title={"TEST 1"}
+          title={"NCT00533741"}
           content={
-            "ESTO ES UN TEXTO PRUEBA QUE VA A TENER MUCHAS PALABRAS PARA VER COMO REACCIONA LA PANTALLA EN RELACION AL TAMAñO DE CARDS MUY GRANDES, QUE CAGADO SE VE LA ñ EN CHIQUITO, NO SE COMO PONERLA EN GRANTE PTM"
+            "Induction of Cytokines in Human Monocytes by SARS-CoV in Adults and Children"
           }
         />
 
         <ResearchCard
-          title={"TEST 1"}
+          title={"NCT00523276"}
           content={
-            "ESTO ES UN TEXTO PRUEBA QUE VA A TENER MUCHAS PALABRAS PARA VER COMO REACCIONA LA PANTALLA EN RELACION AL TAMAñO DE CARDS MUY GRANDES, QUE CAGADO SE VE LA ñ EN CHIQUITO, NO SE COMO PONERLA EN GRANTE PTM"
+            "Immune Responses, Transmission and Nucleotide Polymorphisms in Families With SARS Virus Infections"
           }
         />
 
         <ResearchCard
-          title={"TEST 1"}
+          title={"NCT00533741"}
           content={
-            "ESTO ES UN TEXTO PRUEBA QUE VA A TENER MUCHAS PALABRAS PARA VER COMO REACCIONA LA PANTALLA EN RELACION AL TAMAñO DE CARDS MUY GRANDES, QUE CAGADO SE VE LA ñ EN CHIQUITO, NO SE COMO PONERLA EN GRANTE PTM"
+            "Phase I, Double-Blinded, Placebo-Controlled Dosage Escalation Study of the Safety and Immunogenicity of Adjuvanted and Non-Adjuvanted Inactivated SARS Coronavirus (SARS-CoV) Vaccine Administered by the Intramuscular Route"
           }
         />
 
         <ResearchCard
-          title={"TEST 1"}
+          title={"NCT01376765"}
           content={
-            "ESTO ES UN TEXTO PRUEBA QUE VA A TENER MUCHAS PALABRAS PARA VER COMO REACCIONA LA PANTALLA EN RELACION AL TAMAñO DE CARDS MUY GRANDES, QUE CAGADO SE VE LA ñ EN CHIQUITO, NO SE COMO PONERLA EN GRANTE PTM"
+            "Phase I, Double-Blinded, Placebo-Controlled, Dose- Escalation Study of the Safety and Immunogenicity of Recombinant SARS-CoV deltaTM S Protein Vaccine Formulated With and Without Alhydrogel® in Healthy Adults When Administered by the Intramuscular Route"
           }
         />
 
         <ResearchCard
-          title={"TEST 1"}
+          title={"IRCT20180223038837N1"}
           content={
-            "ESTO ES UN TEXTO PRUEBA QUE VA A TENER MUCHAS PALABRAS PARA VER COMO REACCIONA LA PANTALLA EN RELACION AL TAMAñO DE CARDS MUY GRANDES, QUE CAGADO SE VE LA ñ EN CHIQUITO, NO SE COMO PONERLA EN GRANTE PTM"
+            "Comparative study of radiofrequency ablation & foam sclerothrapy for treatment patients suffering from great saphenous varicose vein"
           }
         />
 
         <ResearchCard
-          title={"TEST 1"}
+          title={"NCT04246242"}
           content={
-            "ESTO ES UN TEXTO PRUEBA QUE VA A TENER MUCHAS PALABRAS PARA VER COMO REACCIONA LA PANTALLA EN RELACION AL TAMAñO DE CARDS MUY GRANDES, QUE CAGADO SE VE LA ñ EN CHIQUITO, NO SE COMO PONERLA EN GRANTE PTM"
+            "A Randomized Multicenter Controlled Clinical Trial of Arbidol in Patients With 2019 Novel Coronavirus (2019-nCoV)"
           }
         />
       </div>

@@ -11,7 +11,7 @@ export const ResearchCard = ({ title, content }: props) => {
   return (
     <div
       onClick={() => setisOverview_active(true)}
-      className="hover:cursor-pointer bg-transparent hover:bg-blue-themeLighter shadow-md rounded-md drop-shadow-3xl mr-2 my-2 p-2"
+      className="hover:cursor-pointer bg-transparent hover:bg-blue-themeLighter shadow-md border-x border-grayT-200 rounded-md drop-shadow-3xl mr-2 my-2 p-2"
     >
       {/* RESEARCH TITLE */}
       <div className="font-bold pb-2">{title}</div>

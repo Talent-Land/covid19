@@ -19,8 +19,8 @@ export const StatisticContainer = () => {
       <div className="flex flex-row">
         {/* NUMBER OF RESEARCHS */}
         <StatisticCard
-          title="Global research"
-          stat="12312312"
+          title="Worldwide studies"
+          stat="14,680"
           color="text-[#0BD4A1]"
           bordercolor="border-[#0BD4A1]"
         >
@@ -34,8 +34,8 @@ export const StatisticContainer = () => {
 
         {/* NUMBER OF RESEARCHS MEN */}
         <StatisticCard
-          title="Men research"
-          stat="12312312"
+          title="Studies on men"
+          stat="10,000"
           color="text-blueT-500"
           bordercolor="border-blueT-500"
         >
@@ -49,14 +49,14 @@ export const StatisticContainer = () => {
 
         {/* NUMBER OF RESEARCHS WOMEN */}
         <StatisticCard
-          title="Women research"
-          stat="12312312"
-          color="text-redT-500"
-          bordercolor="border-redT-500"
+          title="Studies on women"
+          stat="4,680"
+          color="text-pinkT-500"
+          bordercolor="border-pinkT-500"
         >
           <div>
             <VenusSVG
-              classname="text-redT-500 fill-current h-10"
+              classname="text-pinkT-500 fill-current h-10"
               title={false}
             />
           </div>
@@ -64,8 +64,8 @@ export const StatisticContainer = () => {
 
         {/* NUMBER OF COUNTRIES */}
         <StatisticCard
-          title="Countries research"
-          stat="12312312"
+          title="Participant countries"
+          stat="249"
           color="text-[#D4CB15]"
           bordercolor="border-[#D4CB15]"
         >

@@ -12,7 +12,7 @@ interface props {
   filterState: boolean;
 }
 
-const studyTypeList = ["Prueba1", "Prueba2", "Prueba3", "Prueba4", "Prueba5"];
+const studyTypeList = ["Test 1", "Test 2", "Test 3", "Test 4", "Test 5"];
 
 export const FilterContainer = ({ setfilterState, filterState }: props) => {
   const [isGender, setisGender] = useState("");
@@ -242,7 +242,7 @@ export const FilterContainer = ({ setfilterState, filterState }: props) => {
       <div className="flex flex-col place-items-end">
         <div>
           <Button
-            text={"Aplicar filtros"}
+            text={"OK"}
             color={"bg-blue-themePrimary"}
             colorHover={"hover:bg-blue-themeDark"}
             isClicked={isClickedFilters}
@@ -250,7 +250,7 @@ export const FilterContainer = ({ setfilterState, filterState }: props) => {
           />
 
           <Button
-            text={"Cancelar"}
+            text={"Cancel"}
             color={"bg-redT-600"}
             colorHover={"hover:bg-redT-700"}
             isClicked={isClickedCancel}
