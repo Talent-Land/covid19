@@ -26,7 +26,7 @@ export const ToggleButton = (props: Props) => {
   } = props;
 
   return (
-    <div className="flex bottom-0 justify-end mr-2">
+    <div className="flex bottom-0 justify-end mr-2 max-h-8">
       <div className="inline-flex rounded-xl shadow-md bg-grayT-200">
         <button
           onClick={() => {

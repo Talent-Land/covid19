@@ -83,23 +83,25 @@ export const StatisticContainer = () => {
         </StatisticCard>
       </div>
 
-      <div className="flex flex-grow place-content-center rounded-md text-2xl text-blue-themePrimary font-bold">
-        <div className="p-2">{titleComponent}</div>
+      <div className="flex flex-grow place-content-center justify-end rounded-md text-2xl text-blue-themePrimary font-bold">
+        <div className="flex place-content-center w-full">{titleComponent}</div>
+        <div className="flex">
+          <ToggleButton
+            isWorld_active={isWorld_active}
+            isGraphic_active={isGraphic_active}
+            isNodeGraph_active={isNodeGraph_active}
+            titleComponent={titleComponent}
+            setisGraphic_active={setisGraphic_active}
+            setisWorld_active={setisWorld_active}
+            setisNodeGraph_active={setisNodeGraph_active}
+            settitleComponent={settitleComponent}
+          />
+        </div>
       </div>
 
       {isWorld_active && <MapContainer />}
       {isGraphic_active && <ChartsContainer />}
       {isNodeGraph_active && <GraphContainer />}
-      <ToggleButton
-        isWorld_active={isWorld_active}
-        isGraphic_active={isGraphic_active}
-        isNodeGraph_active={isNodeGraph_active}
-        titleComponent={titleComponent}
-        setisGraphic_active={setisGraphic_active}
-        setisWorld_active={setisWorld_active}
-        setisNodeGraph_active={setisNodeGraph_active}
-        settitleComponent={settitleComponent}
-      />
     </>
   );
 };

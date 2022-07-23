@@ -2,7 +2,7 @@ import Plot from "react-plotly.js";
 
 export const MapContainer = () => {
   return (
-    <div className="flex-auto flex grow justify-center items-center overflow-y-auto">
+    <div className="flex flex-auto grow justify-center items-center overflow-y-auto">
       <Plot
         data={[
           {

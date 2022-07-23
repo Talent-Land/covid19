@@ -9,8 +9,8 @@ export const MainContainer = () => {
   return (
     <>
       <div className="flex flex-col bg-transparent">
-        <div className="flex place-content-between bg-blue-themePrimary w-full h-24">
-          {/* NAVIGATION BAR */}
+        {/* NAVIGATION BAR */}
+        <div className="flex place-content-between bg-blue-themePrimary w-full">
           <div className="flex flex-row content-center text-3xl text-whiteT ml-10">
             <img src={LogoAstraZeneca} alt="AstraZeneca" className="h-14" />
           </div>
@@ -24,10 +24,11 @@ export const MainContainer = () => {
         <div className="flex flex-row gap-4 overflow-y-auto">
           <div className="flex flex-col basis-8/12 m-4">
             <StatisticContainer />
-            {/* <ResearchInfoContainer /> */}
           </div>
 
-          {/* <ResearchInfoContainer /> */}
+          <div className="flex flex-col basis-4/12 mt-4 bg-transparent mr-10 overflow-y-auto">
+            <ResearchContainer />
+          </div>
 
           <div className="flex absolute h-full top-0  items-end ml-2 ">
             <a href="https://www.youtube.com/watch?v=djV11Xbc914">
@@ -38,10 +39,6 @@ export const MainContainer = () => {
               />
             </a>
           </div>
-        </div>
-
-        <div className="flex flex-col basis-4/12 mt-4 bg-transparent mr-10 overflow-y-auto">
-          <ResearchContainer />
         </div>
       </div>
     </>
